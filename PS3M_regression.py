@@ -113,7 +113,7 @@ def submit():
             lt6.append(k)
     dfs2=pd.DataFrame(zip(lt4,lt5,lt6,lt7))
     dfs2.columns=['R2','Descriptors','ED','Replaced_with']
-    dfs2.to_csv(''ED_information_regression.csv',index=False)
+    dfs2.to_csv('ED_information_regression.csv',index=False)
     s1,i1,l1,l2,l3,l4=[],[],[],[],[],[]
     m1,m2,m3,m4,m5,m6=[],[],[],[],[],[]
     d1,d2,d3=[],[],[]
@@ -330,7 +330,7 @@ fifthEntryTabOne.place(x=300,y=73)
 b5=tk.Button(tab1,text='Browse', command=data3,font=("Helvetica", 10))
 b5.place(x=550,y=70)  
 
-sixthLabelTabOne = tk.Label(tab1, text="Select original classification model",font=("Helvetica", 12))
+sixthLabelTabOne = tk.Label(tab1, text="Select original regression model",font=("Helvetica", 12))
 sixthLabelTabOne.place(x=48,y=100)
 sixthEntryTabOne = tk.Entry(tab1, width=40)
 sixthEntryTabOne.place(x=300,y=103)
