@@ -253,6 +253,7 @@ def submit():
     if Table.iloc[0,:][dp]>Table.sort_values(by='Model',ascending=False).iloc[0,:][dp]:
        messagebox.showinfo('Message','At least one better model was found, the best model saved')
        X=df1[Table.iloc[0,:].Descriptors]
+       reg.fit(X,df1y)
        ypr=pd.DataFrame(reg.predict(X))
        ypr.columns=['Predict']
        model_train=pd.concat([df1.iloc[:,0:1],X,df1y,ypr],axis=1)
